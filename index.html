@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link style CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- link boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>MyBookshelf</title>
+</head>
+<body>
+    <header class="header-bar">
+        <h2 class="header-bar-title">MyBookShelf</h2>
+
+        <div class="dark-mode button">
+            <i class='bx bx-moon' id="themeChange" ></i>  
+        </div>
+    </header>
+
+    <main>
+        <section class="input-section section">
+            <h2 class="section-title">Input your books</h2>
+
+            <form action="input" id="inputBook">
+                <input type="text" id="booktitle" placeholder="Title" class="input-book" required >
+                <input type="number" id="bookyear" placeholder="Year" class="input-book" required >
+                <input type="text" id="bookauthor" placeholder="Author" class="input-book" required >
+                <input type="text" id="bookpublisher" placeholder="Publisher" class="input-book" required >
+
+                <div class="checkbox">
+                    <input type="checkbox" id="book-complete">
+                    <label for="book-complete">Finished reading</label>
+                </div>
+
+                <button type="submit" id="save-book" class="button">Save</button>
+            </form>
+        </section>
+
+        <aside>
+            <section class="search-section section">
+                <form action="search" class="seacrh-book" id="searchBook">
+                    <input type="text" id="search-book-title" placeholder="Search...">
+                    <i class='bx bx-search search-icon button' id="button-search"></i>
+                </form>
+                <span class="warn-search">*Search your book by title</span>
+            </section>
+
+            <section class="bookshelf-section section">
+                <h2 class="section-title">Not finished reading</h2>
+
+                <div id="uncompletebookshelf" class="booklist">
+                    
+                </div>
+            </section>
+
+            <section class="bookshelf-section section">
+                <h2 class="section-title">finished reading</h2>
+
+                <div id="completebookshelf" class="booklist">
+                    
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>
